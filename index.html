@@ -5,27 +5,446 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/0fb8cd6d55.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>SIG | Kondisi Lamun di Pulau Ambon</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold p-4">Kondisi Lamun di Pulau Ambon</h1>
-    <div class="map-container relative" id="map-cont">
-      <img src="" alt="" id="map" />
-      <i
-        class="left-[785px] top-[12px] text-3xl border-white text-red-500 fa-solid fa-location-pin hover:text-4xl hover:top-[10px]"
-      ></i>
-      <i
-        class="left-[620px] top-[60px] text-3xl border-white text-red-500 fa-solid fa-location-pin hover:text-4xl hover:top-[55px]"
-      ></i>
-      <i
-        class="top-[225px] text-3xl border-white text-red-500 fa-solid fa-location-pin hover:text-4xl"
-      ></i>
-    </div>
+    <header>
+      <div class="relative img">
+        <img src="images/seagrass-1280x720.jpg" alt="seagrass" />
+        <div class="flex pl-7">
+          <h1 class="absolute top-[39%] text-white text-lg tracking-wider">
+            LAMUN
+          </h1>
+        </div>
+      </div>
+    </header>
+    <main class="py-10 px-7 flex flex-col gap-10">
+      <article class="flex flex-col gap-[10px]">
+        <h2 class="text-orange-500 text-lg leading-6 font-semibold">
+          KONDISI LAMUN DI<br />PULAU AMBON
+        </h2>
+        <p class="text-[12px]">
+          Kondisi dan keanekaragaman lamun di perairan Pulau Ambon, khususnya di
+          perairan Desa Poka, Suli, dan Morella.
+        </p>
+      </article>
+      <article class="flex flex-col gap-5 items-center">
+        <section class="card rounded-xl">
+          <img
+            src="images/poka.jpg"
+            alt="Pantai Desa Poka"
+            class="card-img-top rounded-t-xl"
+          />
+          <div class="card-body flex flex-col items-center gap-2">
+            <h3 class="card-title font-semibold text-lg m-0">Desa Poka</h3>
+            <p class="card-text">
+              Kondisi dan keanekaragaman Lamun di perairan Desa Poka
+            </p>
+            <a
+              href="#"
+              class="btn bg-black text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#poka"
+              >Lihat lebih lanjut</a
+            >
+          </div>
+        </section>
+        <section class="card rounded-xl">
+          <img
+            src="images/morella.jpg"
+            alt="Pantai Desa Morella"
+            class="card-img-top rounded-t-xl"
+          />
+          <div class="card-body flex flex-col items-center gap-2">
+            <h3 class="card-title font-semibold text-lg m-0">Desa Morella</h3>
+            <p class="card-text">
+              Kondisi dan keanekaragaman Lamun di perairan Desa Morella
+            </p>
+            <a 
+            href="#"
+            class="btn bg-black text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#morella">
+            Lihat lebih lanjut
+          </a>
+          </div>
+        </section>
+        <section class="card rounded-xl">
+          <img
+            src="images/suli.jpg"
+            alt="Pantai Desa Suli"
+            class="card-img-top rounded-t-xl"
+          />
+          <div class="card-body flex flex-col items-center gap-3">
+            <h3 class="card-title font-semibold text-lg m-0">Desa Suli</h3>
+            <p class="card-text">
+              Kondisi dan keanekaragaman Lamun di perairan Desa Suli
+            </p>
+            <a 
+            href="#"
+            class="btn bg-black text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#suli">Lihat lebih lanjut</a>
+          </div>
+        </section>
+        <div
+          class="modal fade"
+          id="poka"
+          tabindex="-1"
+          aria-labelledby="pokaLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title font-semibold text-[1.3rem]">
+                  Kondisi Lamun di Desa Poka
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body flex flex-col gap-3">
+                <div class="flex flex-col gap-2 items-center">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31853.908553172852!2d128.17649435016148!3d-3.6469800003412938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6ceed73d3c46f1%3A0xf2f0e8f34c52d02b!2sPoka%2C%20Kec.%20Tlk.%20Ambon%2C%20Kota%20Ambon%2C%20Maluku!5e0!3m2!1sid!2sid!4v1666191732835!5m2!1sid!2sid"
+                    width="300"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                  <p>Lokasi Desa Poka</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="underline font-semibold">Parameter Fisika dan Kimia</h3>
+                  <table>
+                    <tr>
+                      <th>Suhu</th>
+                      <td>23&#8451</td>
+                    </tr>
+                    <tr>
+                      <th>Salinitas</th>
+                      <td>4%</td>
+                    </tr>
+                    <tr>
+                      <th>Oksigen Terlarut</th>
+                      <td>8.2 mg/L</td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td>8.2</td>
+                    </tr>
+                    <tr>
+                      <th>Substrat</th>
+                      <td>Lumpur</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                  <h3 class="underline font-semibold">Spesies Lamun yang Ditemukan</h3>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/enhalusac.jpg" alt="Enhalus acoroides">
+                    <figcaption>Enhalus acoroides</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/halophilaov.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halophila ovalis</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/halodulepin.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halodule pinifolia</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/thalassiahem.jpg" alt="Enhalus acoroides">
+                    <figcaption>Thalassia hemprichii</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="poka"
+          tabindex="-1"
+          aria-labelledby="pokaLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title font-semibold text-[1.3rem]">
+                  Kondisi Lamun di Desa Poka
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body flex flex-col gap-3">
+                <div class="flex flex-col gap-2 items-center">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31853.908553172852!2d128.17649435016148!3d-3.6469800003412938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6ceed73d3c46f1%3A0xf2f0e8f34c52d02b!2sPoka%2C%20Kec.%20Tlk.%20Ambon%2C%20Kota%20Ambon%2C%20Maluku!5e0!3m2!1sid!2sid!4v1666191732835!5m2!1sid!2sid"
+                    width="300"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                  <p>Lokasi Desa Poka</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="underline font-semibold">Parameter Fisika dan Kimia</h3>
+                  <table>
+                    <tr>
+                      <th>Suhu</th>
+                      <td>23&#8451</td>
+                    </tr>
+                    <tr>
+                      <th>Salinitas</th>
+                      <td>4%</td>
+                    </tr>
+                    <tr>
+                      <th>Oksigen Terlarut</th>
+                      <td>8.2 mg/L</td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td>8.2</td>
+                    </tr>
+                    <tr>
+                      <th>Substrat</th>
+                      <td>Lumpur</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                  <h3 class="underline font-semibold">Spesies Lamun yang Ditemukan</h3>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/enhalusac.jpg" alt="Enhalus acoroides">
+                    <figcaption>Enhalus acoroides</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/halophilaov.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halophila ovalis</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/halodulepin.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halodule pinifolia</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/thalassiahem.jpg" alt="Enhalus acoroides">
+                    <figcaption>Thalassia hemprichii</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="morella"
+          tabindex="-1"
+          aria-labelledby="morellaLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title font-semibold text-[1.3rem]">
+                  Kondisi Lamun di Desa Morella
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body flex flex-col gap-3">
+                <div class="flex flex-col gap-2 items-center">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31857.859577315117!2d128.22042555!3d-3.5337245499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6cf144be6a705f%3A0x6166dc946271b8e4!2sMorela%2C%20Kec.%20Leihitu%2C%20Kabupaten%20Maluku%20Tengah%2C%20Maluku!5e0!3m2!1sid!2sid!4v1666238884333!5m2!1sid!2sid" 
+                  width="300" 
+                  height="300" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                  <p>Lokasi Desa Morella</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="underline font-semibold">Parameter Fisika dan Kimia</h3>
+                  <table>
+                    <tr>
+                      <th>Suhu</th>
+                      <td>30&#8451</td>
+                    </tr>
+                    <tr>
+                      <th>Salinitas</th>
+                      <td>3.5%</td>
+                    </tr>
+                    <tr>
+                      <th>Oksigen Terlarut</th>
+                      <td>12.2 mg/L</td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td>7.5</td>
+                    </tr>
+                    <tr>
+                      <th>Substrat</th>
+                      <td>Pecahan karang</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                  <h3 class="underline font-semibold">Spesies Lamun yang Ditemukan</h3>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/enhalusac.jpg" alt="Enhalus acoroides">
+                    <figcaption>Enhalus acoroides</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/halophilaov.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halophila ovalis</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/halodulepin.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halodule pinifolia</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/syringodiumiso.jpg" alt="Enhalus acoroides">
+                    <figcaption>Syringodium isoetifolium</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class='lg-img' src="images/cymodocearot.jpg" alt="Enhalus acoroides">
+                    <figcaption>Cymodocea rotundata</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="suli"
+          tabindex="-1"
+          aria-labelledby="suliLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title font-semibold text-[1.3rem]">
+                  Kondisi Lamun di Desa Suli
+                </h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body flex flex-col gap-3">
+                <div class="flex flex-col gap-2 items-center">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63710.41990710809!2d128.29371505000003!3d-3.6100674999999915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6ced18588ff215%3A0x71ff684b292d8f77!2sSuli%2C%20Kec.%20Salahutu%2C%20Kabupaten%20Maluku%20Tengah%2C%20Maluku!5e0!3m2!1sid!2sid!4v1666239573886!5m2!1sid!2sid" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <p>Lokasi Desa Suli</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="underline font-semibold">Parameter Fisika dan Kimia</h3>
+                  <table>
+                    <tr>
+                      <th>Suhu</th>
+                      <td>31&#8451</td>
+                    </tr>
+                    <tr>
+                      <th>Salinitas</th>
+                      <td>2%</td>
+                    </tr>
+                    <tr>
+                      <th>Oksigen Terlarut</th>
+                      <td>2.6 mg/L</td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td>7.3</td>
+                    </tr>
+                    <tr>
+                      <th>Substrat</th>
+                      <td>Pasir lumpur</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                  <h3 class="underline font-semibold">Spesies Lamun yang Ditemukan</h3>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/enhalusac.jpg" alt="Enhalus acoroides">
+                    <figcaption>Enhalus acoroides</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/halophilaov.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halophila ovalis</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/halodulepin.jpg" alt="Enhalus acoroides">
+                    <figcaption>Halodule pinifolia</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class="lg-img" src="images/syringodiumiso.jpg" alt="Enhalus acoroides">
+                    <figcaption>Syringodium isoetifolium</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img class='lg-img' src="images/cymodocearot.jpg" alt="Enhalus acoroides">
+                    <figcaption>Cymodocea rotundata</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/thalassiahem.jpg" alt="Enhalus acoroides">
+                    <figcaption>Thalassia hemprichii</figcaption>
+                  </figure>
+                  <figure class="lamun-spc">
+                    <img src="images/cymodoceaser.jpg" alt="Enhalus acoroides">
+                    <figcaption>Cymodocea serulata</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="bg-black text-white flex flex-col gap-3 items-center py-8">
+      <a href="https://ojs3.unpatti.ac.id/index.php/biopendix/article/view/3258" class="text-orange-500 font-semibold underline">Cek Sumber</a>
+      <h1>oleh <a href="https://ezragregoo.github.io/Personal-Site/" class="font-semibold">Ezra G. Noya</a></h1>
+    </footer>
   </body>
 </html>
